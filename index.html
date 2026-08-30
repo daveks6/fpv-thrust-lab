@@ -90,7 +90,9 @@ tmFamily('m1204','M1204','1204','See source','2–4S',tmh+'category-194-b0-Motor
 tmFamily('m1404','M1404','1404','See source','3–4S',tmh+'category-194-b0-Motor.html'),
 tmFamily('f10','F10','See source','See source','See source',tmh+'category-179-b0-Motor.html'),
 tmFamily('f1103','F1103 / F1103 II','1103','8000 / see source','See source',tmh+'category-179-b0-Motor.html'),
-tmFamily('f1204','F1204','1204',5000,'3–4S',tmh+'category-179-b0-Motor.html')
+tmFamily('f1204','F1204','1204',5000,'3–4S',tmh+'category-179-b0-Motor.html'),
+tmFamily('its23065','ITS FPV','2306.5',1750,'6S',tmh+'category-200-b0-Champion%2BCo-brand.html'),
+tmFamily('its2208','ITS FPV','2208',1750,'6S','https://en.tmotorhobby.com/goods-1362-TMOTOR%2BITS%2B2208%2B1750kv%2BSmooth%2BFreestyle%2BFPV%2BMotor.html')
 ];
 base.push(...requestedTmotor.filter(n=>!base.some(m=>m.brand===n.brand&&m.model===n.model&&String(m.kv)===String(n.kv))));
 const rcFamily=(id,model,size,source,kv='See source',battery='See source')=>({id:'rc-cat-'+id,brand:'RCINPower',model,size,kv,battery,prop:'Use the exact prop shown on the linked RCINPower product/test sheet',propBrand:'Manufacturer test-sheet prop',evidence:'none',source});
