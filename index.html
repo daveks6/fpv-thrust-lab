@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050b12"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Thrust Lab"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><link rel="icon" href="icons/app-icon-192.png">
 <title>FPV Thrust Lab — Source-aware motor calculator</title>
 <meta name="description" content="Compare FPV motor, prop and battery combinations without confusing catalog specs with verified manufacturer thrust curves.">
 <style>
@@ -414,4 +415,4 @@ if(comparisonKey){
  addEventListener('message',event=>{const msg=event.data;if(!msg||msg.type!=='fpv-config'||msg.key!==comparisonKey)return;const c=msg.config||{};els.brand.value=els.size.value=els.battery.value='';rebuild('brand');if(c.motor){els.motor.value=c.motor;els.motor.onchange()}els.propBrand.value='';opts(els.prop,props,'All compatible / catalog props');if(c.prop)els.prop.value=c.prop;els.batteryBrand.value='';rebuildBatteryList();if(c.battery){els.batteryModel.value=c.battery;els.capacity.value=selectedBattery().capacity}if(c.weight)els.weight.value=c.weight;if(c.count)els.motorCount.value=c.count;render();comparisonSend()});
  parent.postMessage(comparisonCatalog,'*');comparisonSend();
 }
-</script></body></html>
+</script><script>if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}))}</script></body></html>
