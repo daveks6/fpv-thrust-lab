@@ -1,14 +1,14 @@
-const CACHE_NAME = 'fpv-thrust-lab-v1';
+const CACHE_NAME = 'fpv-thrust-lab-v2';
 const APP_SHELL = [
   './',
   './index.html',
   './comparison.html',
   './build-finder.html',
   './manifest.webmanifest',
-  './icons/app-icon-192.png',
-  './icons/app-icon-512.png',
-  './icons/app-icon-maskable-512.png',
-  './icons/apple-touch-icon.png'
+  './icons/app-icon-v2-192.png',
+  './icons/app-icon-v2-512.png',
+  './icons/app-icon-v2-maskable-512.png',
+  './icons/apple-touch-icon-v2.png'
 ];
 
 self.addEventListener('install', event => {
